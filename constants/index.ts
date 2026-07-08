@@ -1,4 +1,5 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import {
   RxDiscordLogo,
   RxGithubLogo,
@@ -90,19 +91,19 @@ export const SKILL_DATA = [
 
 export const SOCIALS = [
   {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://linkedin.com",
   },
   {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
+    name: "Email",
+    icon: MdEmail,
+    link: "mailto:contact@example.com",
   },
 ] as const;
 
@@ -348,6 +349,10 @@ export const NAV_LINKS = [
   {
     title: "About me",
     link: "#about-me",
+  },
+  {
+    title: "Services",
+    link: "#services",
   },
   {
     title: "Skills",
