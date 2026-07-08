@@ -57,10 +57,13 @@ space-portfolio/
   |- components/
     |-- main/
     |-- sub/
+    |-- ui/
   |- config/
     |-- index.ts
   |- constants/
     |-- index.ts
+  |- data/
+    |-- Services.ts
   |- lib/
     |-- motion.ts
     |-- utils.ts
