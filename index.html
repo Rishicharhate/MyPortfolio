@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rishi Charhate — Android Developer, Web Developer & Full Stack Developer. Portfolio showcasing mobile and web projects built with Kotlin, React.js, Firebase, Supabase, and modern architectures.">
-    <meta name="keywords" content="Rishi Charhate, Android Developer, Web Developer, Full Stack Developer, Kotlin, React.js, Portfolio">
+    <meta name="description"
+        content="Rishi Charhate — Android Developer, Web Developer & Full Stack Developer. Portfolio showcasing mobile and web projects built with Kotlin, React.js, Firebase, Supabase, and modern architectures.">
+    <meta name="keywords"
+        content="Rishi Charhate, Android Developer, Web Developer, Full Stack Developer, Kotlin, React.js, Portfolio">
     <meta name="author" content="Rishi Charhate">
     <meta property="og:title" content="Rishi Charhate | Developer Portfolio">
     <meta property="og:description" content="Android & Web Developer building scalable mobile and web applications.">
@@ -12,27 +15,29 @@
     <title>Rishi Charhate | Developer Portfolio</title>
     <style>
         /* ===== CSS RESET & BASE ===== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-                --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-card: rgba(255, 255, 255, 0.8);
-    --bg-glass: rgba(255, 255, 255, 0.65);
-              --border-glass: rgba(15, 23, 42, 0.1);
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: rgba(255, 255, 255, 0.8);
+            --bg-glass: rgba(255, 255, 255, 0.65);
+            --border-glass: rgba(15, 23, 42, 0.1);
             --accent-blue: #4f8cff;
             --accent-purple: #a855f7;
             --accent-cyan: #22d3ee;
             --gradient-primary: linear-gradient(135deg, #4f8cff 0%, #a855f7 100%);
             --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%);
-            --gradient-subtle: linear-gradient(135deg, rgba(79,140,255,0.10) 0%, rgba(168,85,247,0.10) 100%);
+            --gradient-subtle: linear-gradient(135deg, rgba(79, 140, 255, 0.10) 0%, rgba(168, 85, 247, 0.10) 100%);
             --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #64748b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
             --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-mono: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
             --radius-sm: 8px;
@@ -64,9 +69,18 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 3px; }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 3px;
+        }
 
         /* ===== ANIMATED BACKGROUND ===== */
         .bg-animation {
@@ -86,33 +100,52 @@
         }
 
         .bg-animation .orb:nth-child(1) {
-            width: 600px; height: 600px;
+            width: 600px;
+            height: 600px;
             background: var(--accent-blue);
-            top: -10%; left: -5%;
+            top: -10%;
+            left: -5%;
             animation-duration: 25s;
         }
 
         .bg-animation .orb:nth-child(2) {
-            width: 500px; height: 500px;
+            width: 500px;
+            height: 500px;
             background: var(--accent-purple);
-            top: 40%; right: -10%;
+            top: 40%;
+            right: -10%;
             animation-duration: 30s;
             animation-delay: -5s;
         }
 
         .bg-animation .orb:nth-child(3) {
-            width: 400px; height: 400px;
+            width: 400px;
+            height: 400px;
             background: var(--accent-cyan);
-            bottom: -5%; left: 30%;
+            bottom: -5%;
+            left: 30%;
             animation-duration: 22s;
             animation-delay: -10s;
         }
 
         @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(60px, -40px) scale(1.1); }
-            50% { transform: translate(-30px, 50px) scale(0.95); }
-            75% { transform: translate(40px, 20px) scale(1.05); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            25% {
+                transform: translate(60px, -40px) scale(1.1);
+            }
+
+            50% {
+                transform: translate(-30px, 50px) scale(0.95);
+            }
+
+            75% {
+                transform: translate(40px, 20px) scale(1.05);
+            }
         }
 
         /* Grid pattern overlay */
@@ -122,8 +155,8 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-            linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+                linear-gradient(rgba(233, 236, 243, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(225, 227, 233, 0.04) 1px, transparent 1px);
             background-size: 60px 60px;
         }
 
@@ -198,10 +231,21 @@
             transform: translateY(0);
         }
 
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
 
         /* ===== NAVIGATION ===== */
         .navbar {
@@ -215,7 +259,7 @@
         }
 
         .navbar.scrolled {
-             background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-glass);
@@ -361,8 +405,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-            50% { opacity: 0.8; box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+
+            50% {
+                opacity: 0.8;
+                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+            }
         }
 
         .hero-name {
@@ -401,7 +454,9 @@
         }
 
         @keyframes blink {
-            50% { opacity: 0; }
+            50% {
+                opacity: 0;
+            }
         }
 
         .hero-desc {
@@ -511,44 +566,7 @@
             position: relative;
         }
 
-        .hero-graphic .ring {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid var(--border-glass);
-            animation: ringRotate 30s linear infinite;
-        }
-
-        .hero-graphic .ring:nth-child(1) {
-            inset: 0;
-            border-color: rgba(79, 140, 255, 0.15);
-        }
-
-        .hero-graphic .ring:nth-child(2) {
-            inset: 30px;
-            border-color: rgba(168, 85, 247, 0.12);
-            animation-direction: reverse;
-            animation-duration: 25s;
-        }
-
-        .hero-graphic .ring:nth-child(3) {
-            inset: 60px;
-            border-color: rgba(34, 211, 238, 0.10);
-            animation-duration: 20s;
-        }
-
-        .hero-graphic .center-icon {
-            position: absolute;
-            inset: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-glass);
-            border: 1px solid var(--border-glass);
-            border-radius: 50%;
-            backdrop-filter: blur(20px);
-            font-size: 5rem;
-        }
-
+        
         .hero-graphic .orbit-icon {
             position: absolute;
             width: 48px;
@@ -564,18 +582,50 @@
             animation: orbIconFloat 6s ease-in-out infinite;
         }
 
-        .hero-graphic .orbit-icon:nth-child(5) { top: -10px; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
-        .hero-graphic .orbit-icon:nth-child(6) { top: 50%; right: -10px; transform: translateY(-50%); animation-delay: -1.5s; }
-        .hero-graphic .orbit-icon:nth-child(7) { bottom: -10px; left: 50%; transform: translateX(-50%); animation-delay: -3s; }
-        .hero-graphic .orbit-icon:nth-child(8) { top: 50%; left: -10px; transform: translateY(-50%); animation-delay: -4.5s; }
+        .hero-graphic .orbit-icon:nth-child(5) {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+
+        .hero-graphic .orbit-icon:nth-child(6) {
+            top: 50%;
+            right: -50px;
+            transform: translateY(-50%);
+            animation-delay: -1.5s;
+        }
+
+        .hero-graphic .orbit-icon:nth-child(7) {
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: -3s;
+        }
+
+        .hero-graphic .orbit-icon:nth-child(8) {
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+            animation-delay: -4.5s;
+        }
 
         @keyframes ringRotate {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes orbIconFloat {
-            0%, 100% { transform: translate(-50%, 0); }
-            50% { transform: translate(-50%, -8px); }
+
+            0%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, -8px);
+            }
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -704,10 +754,17 @@
             box-shadow: var(--shadow-glow);
         }
 
-        .timeline-content .icon {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+        .timeline-content .icon-android {
+            width: 40px;
+            /* Set desired size */
+            height: 40px;
             display: inline-block;
+            background-image: url('android.png');
+            /* Path to your image */
+            background-size: contain;
+            /* Scale image to fit */
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .timeline-content h3 {
@@ -1026,7 +1083,7 @@
             margin-bottom: 12px;
         }
 
-        .contact-info > p {
+        .contact-info>p {
             font-size: 1rem;
             color: var(--text-secondary);
             margin-bottom: 36px;
@@ -1143,6 +1200,7 @@
             position: relative;
             z-index: 1;
             border-top: 1px solid var(--border-glass);
+            background: rgba(79, 140, 255, 0.08);
             padding: 40px 0;
         }
 
@@ -1235,7 +1293,9 @@
                 gap: 40px;
             }
 
-            .hero-visual { order: -1; }
+            .hero-visual {
+                order: -1;
+            }
 
             .hero-graphic {
                 width: 280px;
@@ -1247,8 +1307,13 @@
                 margin: 0 auto;
             }
 
-            .hero-buttons { justify-content: center; }
-            .hero-stats { justify-content: center; }
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
 
             .about-grid {
                 grid-template-columns: 1fr;
@@ -1259,7 +1324,9 @@
                 grid-template-columns: 1fr;
             }
 
-            .timeline::before { left: 20px; }
+            .timeline::before {
+                left: 20px;
+            }
 
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
@@ -1304,7 +1371,9 @@
                 width: 100%;
             }
 
-            .hamburger { display: flex; }
+            .hamburger {
+                display: flex;
+            }
 
             .hero-graphic {
                 width: 220px;
@@ -1324,7 +1393,11 @@
                 align-items: center;
             }
 
-            .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
 
             .hero-stats {
                 flex-direction: column;
@@ -1351,7 +1424,9 @@
         }
 
         @media (max-width: 480px) {
-            .container { padding: 0 16px; }
+            .container {
+                padding: 0 16px;
+            }
 
             .about-highlights {
                 grid-template-columns: 1fr;
@@ -1364,9 +1439,13 @@
                 padding-right: 20px;
             }
 
-            .education-card { padding: 28px 20px; }
+            .education-card {
+                padding: 28px 20px;
+            }
 
-            .contact-form { padding: 24px; }
+            .contact-form {
+                padding: 24px;
+            }
 
             .achievements-grid {
                 grid-template-columns: 1fr;
@@ -1377,12 +1456,13 @@
         .nav-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 998;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition-smooth);
         }
+
         .nav-overlay.open {
             opacity: 1;
             visibility: visible;
@@ -1392,6 +1472,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Animated Background -->
     <div class="bg-animation" aria-hidden="true">
@@ -1419,6 +1500,32 @@
                 <span></span>
                 <span></span>
             </button>
+            <div class="footer-socials">
+                <a href="mailto:rishipatilcharhate22@gmail.com" aria-label="Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/rishi-charhate" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Rishicharhate" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
@@ -1440,19 +1547,34 @@
                         <span class="typing-text" id="typingText">Android Developer</span>
                     </p>
                     <p class="hero-desc">
-                        I design and build robust mobile &amp; web applications that solve real-world problems — powered by modern architectures, clean code, and a passion for great user experiences.
+                        I design and build robust mobile &amp; web applications that solve real-world problems — powered
+                        by modern architectures, clean code, and a passion for great user experiences.
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
                             View Projects
                         </a>
                         <a href="#contact" class="btn btn-secondary">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
                             Contact Me
                         </a>
                         <a href="#" class="btn btn-outline" id="downloadResume">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
                             Download Resume
                         </a>
                     </div>
@@ -1473,14 +1595,9 @@
                 </div>
                 <div class="hero-visual" aria-hidden="true">
                     <div class="hero-graphic">
-                        <div class="ring"></div>
-                        <div class="ring"></div>
-                        <div class="ring"></div>
-                        <div class="center-icon">💻</div>
-                        <div class="orbit-icon">📱</div>
-                        <div class="orbit-icon">🌐</div>
-                        <div class="orbit-icon">⚡</div>
-                        <div class="orbit-icon">🛠️</div>
+                        <div class="profile-frame">
+                            <div class="profile-pic"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1498,10 +1615,15 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <p>
-                        Android &amp; Web Developer with hands-on experience building scalable mobile and web applications using <strong>Kotlin, JavaScript, React.js, Firebase, Supabase,</strong> and <strong>REST APIs</strong>. Skilled in responsive UI development, backend integration, cloud databases, authentication, and modern architectures like <strong>MVVM</strong>.
+                        Android &amp; Web Developer with hands-on experience building scalable mobile and web
+                        applications using <strong>Kotlin, JavaScript, React.js, Firebase, Supabase,</strong> and
+                        <strong>REST APIs</strong>. Skilled in responsive UI development, backend integration, cloud
+                        databases, authentication, and modern architectures like <strong>MVVM</strong>.
                     </p>
                     <p>
-                        I'm currently pursuing my Bachelor of Engineering in Information Technology and actively building production-grade applications. My goal is to create software that's not only functional, but also elegant, performant, and user-friendly.
+                        I'm currently pursuing my Bachelor of Engineering in Information Technology and actively
+                        building production-grade applications. My goal is to create software that's not only
+                        functional, but also elegant, performant, and user-friendly.
                     </p>
                 </div>
                 <div class="about-highlights reveal reveal-delay-2">
@@ -1542,9 +1664,10 @@
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="icon">📱</div>
+                        <div class="icon-android"></div>
                         <h3>Android Application Development</h3>
-                        <p>Building native Android applications with Kotlin, leveraging Jetpack components, Material Design 3, and modern development practices for smooth, responsive mobile experiences.</p>
+                        <p>Building native Android applications with Kotlin, leveraging Jetpack components, Material
+                            Design 3, and modern development practices for smooth, responsive mobile experiences.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal reveal-delay-1">
@@ -1552,7 +1675,8 @@
                     <div class="timeline-content">
                         <div class="icon">🌐</div>
                         <h3>Web Application Development</h3>
-                        <p>Creating responsive, interactive web applications using HTML, CSS, JavaScript, React.js, and Next.js with modern UI/UX patterns and performance optimization.</p>
+                        <p>Creating responsive, interactive web applications using HTML, CSS, JavaScript, React.js, and
+                            Next.js with modern UI/UX patterns and performance optimization.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal reveal-delay-2">
@@ -1560,7 +1684,8 @@
                     <div class="timeline-content">
                         <div class="icon">🗄️</div>
                         <h3>Backend &amp; Database Integration</h3>
-                        <p>Integrating cloud databases like Firebase Firestore, Supabase PostgreSQL, and local databases like Room and Realm for scalable, real-time data management.</p>
+                        <p>Integrating cloud databases like Firebase Firestore, Supabase PostgreSQL, and local databases
+                            like Room and Realm for scalable, real-time data management.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal reveal-delay-3">
@@ -1568,7 +1693,8 @@
                     <div class="timeline-content">
                         <div class="icon">🔌</div>
                         <h3>REST API Integration</h3>
-                        <p>Designing and consuming RESTful APIs with proper error handling, authentication flows, and efficient data serialization across mobile and web platforms.</p>
+                        <p>Designing and consuming RESTful APIs with proper error handling, authentication flows, and
+                            efficient data serialization across mobile and web platforms.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal reveal-delay-4">
@@ -1576,7 +1702,8 @@
                     <div class="timeline-content">
                         <div class="icon">🏛️</div>
                         <h3>Modern Architecture Implementation</h3>
-                        <p>Implementing MVVM, Repository patterns, and clean architecture principles to build maintainable, testable, and scalable codebases.</p>
+                        <p>Implementing MVVM, Repository patterns, and clean architecture principles to build
+                            maintainable, testable, and scalable codebases.</p>
                     </div>
                 </div>
             </div>
@@ -1600,11 +1727,21 @@
                 </p>
                 <div class="edu-meta">
                     <span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
                         Expected Graduation: 2027
                     </span>
                     <span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
                         Shegaon, Maharashtra
                     </span>
                 </div>
@@ -1631,8 +1768,10 @@
                         <ul>
                             <li>Developed a SaaS-based restaurant management platform with QR-code table ordering.</li>
                             <li>Implemented secure multi-tenant architecture and role-based dashboards.</li>
-                            <li>Built real-time order tracking, Kitchen Order Ticket (KOT) generation, and live notifications.</li>
-                            <li>Added menu management, inventory tracking, analytics, feedback system, and Row Level Security.</li>
+                            <li>Built real-time order tracking, Kitchen Order Ticket (KOT) generation, and live
+                                notifications.</li>
+                            <li>Added menu management, inventory tracking, analytics, feedback system, and Row Level
+                                Security.</li>
                         </ul>
                     </div>
                     <div class="project-footer">
@@ -1655,7 +1794,8 @@
                     <div class="project-body">
                         <ul>
                             <li>Built complete User and Admin Android applications.</li>
-                            <li>Implemented authentication, product management, image uploads, and order processing.</li>
+                            <li>Implemented authentication, product management, image uploads, and order processing.
+                            </li>
                             <li>Created persistent shopping cart using Room Database.</li>
                             <li>Added real-time order tracking and Material Design 3 UI.</li>
                         </ul>
@@ -1782,17 +1922,20 @@
                 <div class="achievement-card reveal">
                     <div class="ach-icon">🏆</div>
                     <h3>Hackathon Participant</h3>
-                    <p>Participated in multiple hackathons, collaborating with teams to build innovative solutions under tight deadlines.</p>
+                    <p>Participated in multiple hackathons, collaborating with teams to build innovative solutions under
+                        tight deadlines.</p>
                 </div>
                 <div class="achievement-card reveal reveal-delay-1">
                     <div class="ach-icon">🚀</div>
                     <h3>Full-Stack Applications</h3>
-                    <p>Built full-stack mobile and web applications from the ground up, handling everything from UI design to backend architecture.</p>
+                    <p>Built full-stack mobile and web applications from the ground up, handling everything from UI
+                        design to backend architecture.</p>
                 </div>
                 <div class="achievement-card reveal reveal-delay-2">
                     <div class="ach-icon">⚡</div>
                     <h3>Production-Grade Development</h3>
-                    <p>Developed production-style applications using modern technologies, best practices, and industry-standard architecture patterns.</p>
+                    <p>Developed production-style applications using modern technologies, best practices, and
+                        industry-standard architecture patterns.</p>
                 </div>
             </div>
         </div>
@@ -1809,20 +1952,30 @@
             <div class="contact-grid">
                 <div class="contact-info reveal">
                     <h3>Get in Touch</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                        something great.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="ci-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
+                                </svg>
                             </div>
                             <div class="ci-text">
                                 <span class="ci-label">Email</span>
-                                <a href="mailto:rishipatilcharhate22@gmail.com" class="ci-value">rishipatilcharhate22@gmail.com</a>
+                                <a href="mailto:rishipatilcharhate22@gmail.com"
+                                    class="ci-value">rishipatilcharhate22@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="ci-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
                             </div>
                             <div class="ci-text">
                                 <span class="ci-label">Phone</span>
@@ -1831,11 +1984,18 @@
                         </div>
                         <div class="contact-item">
                             <div class="ci-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
                             </div>
                             <div class="ci-text">
                                 <span class="ci-label">LinkedIn</span>
-                                <a href="https://linkedin.com/in/rishi-charhate" target="_blank" rel="noopener noreferrer" class="ci-value">linkedin.com/in/rishi-charhate</a>
+                                <a href="https://linkedin.com/in/rishi-charhate" target="_blank"
+                                    rel="noopener noreferrer" class="ci-value">linkedin.com/in/rishi-charhate</a>
                             </div>
                         </div>
                     </div>
@@ -1851,10 +2011,15 @@
                     </div>
                     <div class="form-group">
                         <label for="formMessage">Message</label>
-                        <textarea id="formMessage" name="message" placeholder="Tell me about your project…" required></textarea>
+                        <textarea id="formMessage" name="message" placeholder="Tell me about your project…"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
                         Send Message
                     </button>
                 </form>
@@ -1872,13 +2037,28 @@
                 </div>
                 <div class="footer-socials">
                     <a href="mailto:rishipatilcharhate22@gmail.com" aria-label="Email">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
                     </a>
-                    <a href="https://linkedin.com/in/rishi-charhate" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <a href="https://linkedin.com/in/rishi-charhate" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
                     </a>
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <a href="https://github.com/Rishicharhate" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -1887,12 +2067,15 @@
 
     <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
     </button>
 
     <script>
         /* ===== TYPING ANIMATION ===== */
-        (function() {
+        (function () {
             const titles = [
                 'Android Developer',
                 'Web Developer',
@@ -2017,7 +2200,7 @@
         revealElements.forEach(el => revealObserver.observe(el));
 
         /* ===== CONTACT FORM ===== */
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const btn = this.querySelector('.form-submit');
             const originalHTML = btn.innerHTML;
@@ -2037,7 +2220,7 @@
 
         /* ===== SMOOTH SCROLL FOR ANCHOR LINKS ===== */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -2047,4 +2230,5 @@
         });
     </script>
 </body>
+
 </html>
