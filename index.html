@@ -566,7 +566,31 @@
             position: relative;
         }
 
-        
+        /* Glassmorphism Outer Frame */
+        .profile-frame {
+            position: absolute;
+            width: 500px;
+            height: 500px; /* var(--border-glass) */
+            border-radius: 28px; /* var(--radius-xl) */
+            padding: 12px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1;
+            transform: rotate(-3deg);
+            animation: profileFloat 6s ease-in-out infinite;
+        }
+
+        /* Inner Profile Picture Element */
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px; /* var(--radius-lg) */
+            background-image: url('pp.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #f8fafc; /* var(--bg-secondary) */
+        }
         .hero-graphic .orbit-icon {
             position: absolute;
             width: 48px;
